@@ -7,6 +7,11 @@ JOB_TYPE = [
     ('RM', 'Remote')
 ]
 
+def image_upload(instace , file_name):
+    image_name , extension = file_name.split(".")
+    return 'jobs/%s.%s'%(instace.id, extension)
+
+
 class Job(models.Model):
     title = models.CharField(max_length=100)
     # location = 
@@ -17,6 +22,7 @@ class Job(models.Model):
     salary = models.IntegerField(default=0)
     category = models.ForeignKey('Category', on_delete= models.CASCADE)
     experience = models.IntegerField(default=1)
+    image = models.ImageField(upload_to=image_upload)
 
     def __str__(self) -> str:
         return self.title
