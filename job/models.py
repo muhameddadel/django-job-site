@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 JOB_TYPE = [
-    ('FT', 'Full Time'),
-    ('PT', 'Part Time'),
-    ('RM', 'Remote')
+    ('Full Time', 'Full Time'),
+    ('Part Time', 'Part Time'),
+    ('Remote', 'Remote')
 ]
 
 def image_upload(instace , file_name):
