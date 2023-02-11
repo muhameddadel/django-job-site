@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-xl-12">
         <div class="bradcam_text">
-          <h3>{{job_list.count}}+ Jobs Available</h3>
+          <h3>{{jobs.count}}+ Jobs Available</h3>
         </div>
       </div>
     </div>
@@ -131,7 +131,7 @@
                     <img src="" alt="" />
                   </div>
                   <div class="jobs_conetent">
-                    <a href="{% url 'jobs:job_detail' job.id %}"
+                    <a href="{% url 'jobs:job_detail' job.slug %}"
                       ><h4>{{job}}</h4></a
                     >
                     <div class="links_locat d-flex align-items-center">
@@ -150,7 +150,7 @@
                       <i class="fa fa-heart"></i>
                     </a>
                     <a
-                      href="{% url 'jobs:job_detail' job.id %}"
+                      href="{% url 'jobs:job_detail' job.slug %}"
                       class="boxed-btn3"
                       >Apply Now</a
                     >

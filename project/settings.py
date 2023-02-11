@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     # My Created Apps
     'job', 
+
+    "bootstrap4",
     
 ]
 
